@@ -1,0 +1,58 @@
+# Project: Day4
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = test.o test2.o ex6-1.o ex6-2.o ex6-3.o test3.o test4.o test5.o test1.o test1-1.o ex6-5.o
+LINKOBJ  = test.o test2.o ex6-1.o ex6-2.o ex6-3.o test3.o test4.o test5.o test1.o test1-1.o ex6-5.o
+LIBS     = -L"D:/work/program/Dev-Cpp/MinGW64/lib" -L"D:/work/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/work/program/Dev-Cpp/MinGW64/include" -I"D:/work/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/work/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/work/program/Dev-Cpp/MinGW64/include" -I"D:/work/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/work/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/work/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Day4.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+test.o: test.cpp
+	$(CPP) -c test.cpp -o test.o $(CXXFLAGS)
+
+test2.o: test2.cpp
+	$(CPP) -c test2.cpp -o test2.o $(CXXFLAGS)
+
+ex6-1.o: ex6-1.cpp
+	$(CPP) -c ex6-1.cpp -o ex6-1.o $(CXXFLAGS)
+
+ex6-2.o: ex6-2.cpp
+	$(CPP) -c ex6-2.cpp -o ex6-2.o $(CXXFLAGS)
+
+ex6-3.o: ex6-3.cpp
+	$(CPP) -c ex6-3.cpp -o ex6-3.o $(CXXFLAGS)
+
+test3.o: test3.cpp
+	$(CPP) -c test3.cpp -o test3.o $(CXXFLAGS)
+
+test4.o: test4.cpp
+	$(CPP) -c test4.cpp -o test4.o $(CXXFLAGS)
+
+test5.o: test5.cpp
+	$(CPP) -c test5.cpp -o test5.o $(CXXFLAGS)
+
+test1.o: test1.c
+	$(CPP) -c test1.c -o test1.o $(CXXFLAGS)
+
+test1-1.o: test1-1.cpp
+	$(CPP) -c test1-1.cpp -o test1-1.o $(CXXFLAGS)
+
+ex6-5.o: ex6-5.cpp
+	$(CPP) -c ex6-5.cpp -o ex6-5.o $(CXXFLAGS)
