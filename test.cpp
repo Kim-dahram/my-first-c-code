@@ -1,48 +1,60 @@
 /*
-
 #include<stdio.h>
 
-	int main(void)
-	{
 		int a, b, sum, sub, mul, c, d; 
 		double inv;
-		char ch;
+		char op;
+   void cal (void);
+	
+	int main(void)
+	{
+		int result;
 		
+		cal();
+	    printf("%d\n", result);
+		return 0;
+	}
+
+
+
+void cal(void)
+{
+		int a, b, sum, sub, mul, c, d; 
+		double inv;
+		char op; //오퍼레이트 스위치에 들어가는 값 
 
 		printf("계산기 입력\n");
-		scanf("%d%c%d", &a, &ch, &b); //입력받는문자 앤퍼샌드& 
-		if (ch == '+')
-		 {	
+		scanf("%d%c%d", &a, &op, &b);
+		
+   switch (op)
+	{
+		case '+':
 		 (sum = a+b);
 		printf("%d\n", sum);
-		 }	
-		
-		if (ch == '-')
-		 {	
+		break;
+
+		case '-':
 		 (sub = a-b);
 		printf("%d\n", sub);
-		 }
-		
-		if (ch == '*')
-		 {	
+		break;
+
+		case '*':
 		 (mul = a*b);
 		printf("%d\n", mul);
-		 }
-	
-	    if (ch == '/')
-		 {	
-		 (inv = ((double)a) / ((double)b)); // 실수로 받기 
-		 (c=a/b); 
-		 (d=a%b); // 나머지 계산은 퍼센트 
-		 }
-		 
-		printf("%.1lf\n, 몫 :%d, 나머지 :%d", inv,c,d); //몫은 d로 받기 
-		
+		break;
 
+		case '/':
+		 (inv = ((double)a) / ((double)b) ); //실수로 받는것 
+	     (c=a/b); 
+		 (d=a%b);
 
-
-	
-	
-	return 0;
+		printf("%.1lf\n", inv);
+		printf("몫 : %d\n", c);
+		printf("나머지 : %d\n", d);
+		break;
 	}
+	
+	
+	return;
+}
 */
