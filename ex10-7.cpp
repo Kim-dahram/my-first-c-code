@@ -1,20 +1,16 @@
 /*
 #include <stdio.h>
 void input_ary(double *pa, int size);
-double sum(double *pa, int size);
+double find_max(double *pa, int size);
 int main(void)
 {
 	double ary[5];
-	double total;
-	double avg;
+	double max;
 	int size=sizeof(ary) / sizeof(ary[0]);
 	
 	input_ary(ary, size);
-	total=sum(ary,size);
-	avg = total / size;
-	printf("ÇÕ:%.2lf\n",total);
-	printf("Æò±Õ:%.2f\n",avg);
-
+	max=find_max(ary,size);
+	printf("¹è¿­ÀÇ ÃÖ´ñ°ª:%.1lf\n",max);
 	return 0;
 }
 
@@ -27,15 +23,15 @@ void input_ary(double *pa, int size)
 		}
 }
 
-double sum(double *pa,int size)
+double find_max(double *pa,int size)
 {
-	double sum;
+	double max;
 	int i;
 	
-	sum=pa[0];
+	max=pa[0];
 	for (i=1;i<size;i++)
-	{sum = sum + pa[i];
-}
-	return sum;
+	{if(pa[i]>max) max=pa[i];
+	}
+	return max;
 }
 */

@@ -1,15 +1,15 @@
-# Project: Day6
+# Project: Day7
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = ex8-4.o ex8-5.o ex8-6.o ex8-7.o ex9-1.o ex9-2.o ex9-3.o ex9-4.o test_const.o ex9-5.o ex9-6.o swap.o ex9-7.o ex10-1.o ex10-2.o ex10-3.o
-LINKOBJ  = ex8-4.o ex8-5.o ex8-6.o ex8-7.o ex9-1.o ex9-2.o ex9-3.o ex9-4.o test_const.o ex9-5.o ex9-6.o swap.o ex9-7.o ex10-1.o ex10-2.o ex10-3.o
+OBJ      = ex10-4.o ex10-5.o ex10-6.o ex10-7.o test.o ex11-1.o ex11-2.o ex11-3.o ex11-4.o ex11-5.o ex11-6.o ex11-7.o
+LINKOBJ  = ex10-4.o ex10-5.o ex10-6.o ex10-7.o test.o ex11-1.o ex11-2.o ex11-3.o ex11-4.o ex11-5.o ex11-6.o ex11-7.o
 LIBS     = -L"D:/work/program/Dev-Cpp/MinGW64/lib" -L"D:/work/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/work/program/Dev-Cpp/MinGW64/include" -I"D:/work/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/work/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"D:/work/program/Dev-Cpp/MinGW64/include" -I"D:/work/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/work/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/work/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = Day6.exe
+BIN      = Day7.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,50 +24,38 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-ex8-4.o: ex8-4.cpp
-	$(CPP) -c ex8-4.cpp -o ex8-4.o $(CXXFLAGS)
+ex10-4.o: ex10-4.cpp
+	$(CPP) -c ex10-4.cpp -o ex10-4.o $(CXXFLAGS)
 
-ex8-5.o: ex8-5.cpp
-	$(CPP) -c ex8-5.cpp -o ex8-5.o $(CXXFLAGS)
+ex10-5.o: ex10-5.cpp
+	$(CPP) -c ex10-5.cpp -o ex10-5.o $(CXXFLAGS)
 
-ex8-6.o: ex8-6.cpp
-	$(CPP) -c ex8-6.cpp -o ex8-6.o $(CXXFLAGS)
+ex10-6.o: ex10-6.cpp
+	$(CPP) -c ex10-6.cpp -o ex10-6.o $(CXXFLAGS)
 
-ex8-7.o: ex8-7.cpp
-	$(CPP) -c ex8-7.cpp -o ex8-7.o $(CXXFLAGS)
+ex10-7.o: ex10-7.cpp
+	$(CPP) -c ex10-7.cpp -o ex10-7.o $(CXXFLAGS)
 
-ex9-1.o: ex9-1.cpp
-	$(CPP) -c ex9-1.cpp -o ex9-1.o $(CXXFLAGS)
+test.o: test.cpp
+	$(CPP) -c test.cpp -o test.o $(CXXFLAGS)
 
-ex9-2.o: ex9-2.cpp
-	$(CPP) -c ex9-2.cpp -o ex9-2.o $(CXXFLAGS)
+ex11-1.o: ex11-1.cpp
+	$(CPP) -c ex11-1.cpp -o ex11-1.o $(CXXFLAGS)
 
-ex9-3.o: ex9-3.cpp
-	$(CPP) -c ex9-3.cpp -o ex9-3.o $(CXXFLAGS)
+ex11-2.o: ex11-2.cpp
+	$(CPP) -c ex11-2.cpp -o ex11-2.o $(CXXFLAGS)
 
-ex9-4.o: ex9-4.cpp
-	$(CPP) -c ex9-4.cpp -o ex9-4.o $(CXXFLAGS)
+ex11-3.o: ex11-3.cpp
+	$(CPP) -c ex11-3.cpp -o ex11-3.o $(CXXFLAGS)
 
-test_const.o: test_const.cpp
-	$(CPP) -c test_const.cpp -o test_const.o $(CXXFLAGS)
+ex11-4.o: ex11-4.cpp
+	$(CPP) -c ex11-4.cpp -o ex11-4.o $(CXXFLAGS)
 
-ex9-5.o: ex9-5.cpp
-	$(CPP) -c ex9-5.cpp -o ex9-5.o $(CXXFLAGS)
+ex11-5.o: ex11-5.cpp
+	$(CPP) -c ex11-5.cpp -o ex11-5.o $(CXXFLAGS)
 
-ex9-6.o: ex9-6.cpp
-	$(CPP) -c ex9-6.cpp -o ex9-6.o $(CXXFLAGS)
+ex11-6.o: ex11-6.cpp
+	$(CPP) -c ex11-6.cpp -o ex11-6.o $(CXXFLAGS)
 
-swap.o: swap.cpp
-	$(CPP) -c swap.cpp -o swap.o $(CXXFLAGS)
-
-ex9-7.o: ex9-7.cpp
-	$(CPP) -c ex9-7.cpp -o ex9-7.o $(CXXFLAGS)
-
-ex10-1.o: ex10-1.cpp
-	$(CPP) -c ex10-1.cpp -o ex10-1.o $(CXXFLAGS)
-
-ex10-2.o: ex10-2.cpp
-	$(CPP) -c ex10-2.cpp -o ex10-2.o $(CXXFLAGS)
-
-ex10-3.o: ex10-3.cpp
-	$(CPP) -c ex10-3.cpp -o ex10-3.o $(CXXFLAGS)
+ex11-7.o: ex11-7.cpp
+	$(CPP) -c ex11-7.cpp -o ex11-7.o $(CXXFLAGS)
