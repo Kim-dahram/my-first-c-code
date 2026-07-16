@@ -1,21 +1,20 @@
 /*
 #include <stdio.h>
-int add_ten(int a);
+void add_ten(int *pa);
 
 int main(void)
 {
 	int a=10;
 	
-	a=add_ten(a);
+	add_ten(&a);
 	printf("a: %d\n",a);
 	
 	return 0;
 	
 }
 
-int add_ten(int a)
+void add_ten(int *pa)
 {
-	a= a+10;
-	return a;
+	*pa= *pa+10;
 }
 */
